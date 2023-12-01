@@ -1,0 +1,9 @@
+<!-- app/views/interventions/show.html.erb -->
+<h1>Intervention Details</h1>
+
+<p><strong>Type de Travaux:</strong> <%= @intervention.work_type %></p>
+<p><strong>Description:</strong> <%= @intervention.description %></p>
+<% if @intervention.image.present? %>
+  <p><strong>Image:</strong></p>
+  <%= image_tag @intervention.image.url(:medium) %>
+<% end %>

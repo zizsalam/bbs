@@ -1,0 +1,13 @@
+<!-- app/views/interventions/new.html.erb -->
+<h1>Nouvelle Demande d'Intervention</h1>
+
+<%= form_with(model: @intervention, url: interventions_path, method: :post, multipart: true) do |form| %>
+  <!-- ... existing form fields ... -->
+
+  <div>
+    <%= form.label :image, 'Image' %>
+    <%= form.file_field :image %>
+  </div>
+
+  <!-- ... submit button and closing form tag ... -->
+<% end %>
